@@ -25,7 +25,7 @@ function onInputSearch(e) {
 
   fetchCoutries(inputValue)
   .then(createCoutriesList)
-  // .catch(onErrorNotify);   
+  .catch(onErrorNotify);   
 }
 
 
@@ -42,9 +42,9 @@ if (countryLength === 1) {
 }
 }
 
-// function onErrorNotify(error) {
-//   return Notiflix.Notify.failure('Oops, there is no country with that name');
-// }
+function onErrorNotify(error) {
+  return Notiflix.Notify.failure('Oops, there is no country with that name');
+}
 
 function arrayOfCountries(country){
   const countriesArray = country.map(
