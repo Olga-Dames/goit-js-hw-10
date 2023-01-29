@@ -34,3 +34,8 @@ body {
 .country__name {
   margin: 0;
 }
+
+.flex {
+  display: flex;
+  gap: 20px;
+}

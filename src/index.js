@@ -63,7 +63,7 @@ function countryCard(country){
      <h2 class="country__descr">${name.official}</h2></div>
      <p class="country__name"><b>Capital:</b>${capital}</p>
      <p class="country__name"><b>Population:</b>${population}</p>
-     <p class="country__name"><b>Languages:</b>${languages}</p>`
+     <p class="country__name"><b>Languages:</b>${Object.values(languages)}</p>`
      ).join('')
   refs.countryList.innerHTML = '';
   refs.countryInfo.innerHTML = card;
