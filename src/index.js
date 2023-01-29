@@ -53,17 +53,18 @@ function arrayOfCountries(country){
     <img class="country__icon" src="${flags.svg}" alt="${name.official}" width="60">
     <p class="country__name">${name.official}</p></li>`)
   .join('')
+  refs.countryInfo.innerHTML = ''
   refs.countryList.innerHTML = countriesArray;
 }
 
 function countryCard(country){
   const card = country.map(
-    ({flags, name,capital,population,languages}) =>
-    `<div class="flex"><img class="country__icon" src="${flags.svg}" alt="${name.official}" width="60"></img>
+    ({flags,name,capital,population,languages}) =>
+    `<div class="flex"><img class="country__icon" src="${flags.svg}" alt="${name.official}" width="100"></img>
      <h2 class="country__descr">${name.official}</h2></div>
-     <p class="country__name"><b>Capital:</b>${capital}</p>
-     <p class="country__name"><b>Population:</b>${population}</p>
-     <p class="country__name"><b>Languages:</b>${Object.values(languages)}</p>`
+     <p class="country__name"><b>Capital: </b>${capital}</p>
+     <p class="country__name"><b>Population: </b>${population}</p>
+     <p class="country__name"><b>Languages: </b>${Object.values(languages)}</p>`
      ).join('')
   refs.countryList.innerHTML = '';
   refs.countryInfo.innerHTML = card;
