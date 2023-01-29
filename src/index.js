@@ -37,9 +37,9 @@ if(countryLength > 10) {
 if (countryLength > 1 && countryLength <= 10) {
   return arrayOfCountries(country)
 }
-// if (countryLength === 1) {
-//   return countryCard(country)
-// }
+if (countryLength === 1) {
+  return countryCard(country)
+}
 }
 
 // function onErrorNotify(error) {
@@ -56,9 +56,19 @@ function arrayOfCountries(country){
   refs.countryList.innerHTML = countriesArray;
 }
 
-// function countryCard(){
-//   countryInfo.innerHTML = '';
-// }
+function countryCard(country){
+  const card = country.map(
+    ({flags, name,capital,population,languages}) =>
+    `<div class="flex"><img class="country__icon" src="${flags.svg}" alt="${name.official}" width="60"></img>
+     <h2 class="country__descr">${name.official}</h2></div>
+     <p class="country__name"><b>Capital:</b>${capital}</p>
+     <p class="country__name"><b>Population:</b>${population}</p>
+     <p class="country__name"><b>Languages:</b>${languages}</p>`
+     ).join('')
+  refs.countryList.innerHTML = '';
+  refs.countryInfo.innerHTML = card;
+}
+
 function clearData() {
   refs.countryInfo.innerHTML = '';
   refs.countryList.innerHTML = '';
