@@ -65,10 +65,10 @@ function countryCard(country) {
         `<div class="flex"><img class="country__icon" src="${flags.svg}" alt="${
           name.official
         }" width="100"></img>
-     <h2 class="country__descr">${name.official}</h2></div>
-     <p class="country__name"><b>Capital: </b>${capital}</p>
-     <p class="country__name"><b>Population: </b>${population}</p>
-     <p class="country__name"><b>Languages: </b>${Object.values(languages)}</p>`
+     <h2 class="country__heading">${name.official}</h2></div>
+     <p class="country__item"><b>Capital: </b>${capital}</p>
+     <p class="country__item"><b>Population: </b>${population}</p>
+     <p class="country__item"><b>Languages: </b>${Object.values(languages)}</p>`
     )
     .join('');
   refs.countryList.innerHTML = '';

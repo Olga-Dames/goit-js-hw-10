@@ -20,6 +20,10 @@ body {
   margin-bottom: 16px;
 }
 
+.country-info {
+  margin-left: 50px;
+}
+
 .country-list {
   list-style: none;
   padding: 0;
@@ -40,4 +44,13 @@ body {
   display: flex;
   margin-bottom: 25px;
   gap: 15px;
+}
+
+.country__heading {
+  margin: 0;
+  font-size: 42px;
+}
+
+.country__item {
+  margin-bottom: 20px;
 }
